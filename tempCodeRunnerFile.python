@@ -1,5 +1,0 @@
-import sklearn
-import pandas as pd
-import numpy as np
-import pickle
-model=pickle.load(open('flight_fare_model.pkl',"rb"))
