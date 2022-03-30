@@ -4,6 +4,8 @@ import numpy as np
 import pickle
 import sklearn
 from flask_cors import cross_origin
+
+
 app=Flask(__name__)
 model=pickle.load(open('flight_fare_model.pkl',"rb"))
 
