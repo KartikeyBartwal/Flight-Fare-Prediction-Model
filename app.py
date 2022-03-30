@@ -4,11 +4,12 @@ import numpy as np
 import pickle
 import sklearn
 from flask_cors import cross_origin
+import os
 
 
 app=Flask(__name__)
 model=pickle.load(open('flight_fare_model.pkl',"rb"))
-
+port = int(os.environ.get("PORT", 5000))
 
 
 
@@ -303,5 +304,5 @@ def predict():
   return render_template("home.html")
     
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=port,debug=True)
 
